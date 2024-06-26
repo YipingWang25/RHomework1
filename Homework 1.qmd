@@ -7,7 +7,7 @@ format:
    code: false
 ---
 
-### Introduction 
+### Introduction
 
 In this document, we analyze the 'ships' data set from the 'MASS' package in R. The 'ships' data set contains data on ship type, year of construction, period of operation, number of incidents, and service months. Here are some basic descriptive statistics of the 'ships' data set.
 
