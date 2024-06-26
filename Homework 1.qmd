@@ -7,9 +7,9 @@ format:
    code: false
 ---
 
-### Introduction
+### Introduction 
 
-In this document, we analyze the 'ships' dataset from the 'MASS' package in R. The 'ships' dataset contains data on ship type, year of construction, period of operation, number of incidents, and service months. Here are some basic descriptive statistics of the 'ships' dataset.
+In this document, we analyze the 'ships' data set from the 'MASS' package in R. The 'ships' data set contains data on ship type, year of construction, period of operation, number of incidents, and service months. Here are some basic descriptive statistics of the 'ships' data set.
 
 ```{r}
 library(MASS)
@@ -42,7 +42,7 @@ ggplot(ships, aes(x = period, y = incidents, color = type)) +
   ggtitle("Number of Incidents by Period and Ship Type")
 ```
 
-Explanation: The scatter plot above depicts the number of incidents over different periods of operation for ships in the 'ships' dataset, with different colors representing different ship types. Each point represents a ship type in a specific period. Types A, C, D, and E have relatively few incidents, mostly concentrated around the period 60. Type B has significantly more incidents than other types, especially between periods 60 and 80.
+Explanation: The scatter plot above depicts the number of incidents over different periods of operation for ships in the 'ships' data set, with different colors representing different ship types. Each point represents a ship type in a specific period. Types A, C, D, and E have relatively few incidents, mostly concentrated around the period 60. Type B has significantly more incidents than other types, especially between periods 60 and 80.
 
 **Add a box plot**
 
