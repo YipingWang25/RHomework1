@@ -1,0 +1,47 @@
+---
+title: "Adv Data Prog with R Homework 1"
+author: "Yiping Wang 22212663"
+format: 
+  pdf:
+   embed-resources: true
+   code: false
+---
+
+### Introduction
+
+In this document, we analyze the 'ships' dataset from the 'MASS' package in R. The 'ships' dataset contains data on ship type, year of construction, period of operation, number of incidents, and service months. Here are some basic descriptive statistics of the 'ships' dataset.
+
+```{r}
+library(MASS)
+library(dplyr)
+summary(ships)
+```
+
+The 'ships' dataset contains the following descriptive statistics:
+
+-   Type: 5 categories (A, B, C, D, E) with 8 records each.
+
+-   Year: The construction years of the ships range from 1960 to 1975.
+
+-   Period: The periods of operation range from 1960 to 1975.
+
+-   Service: The service months range from 0 to 44882, with a mean of 4089.3 months.
+
+-   Incidents: The number of incidents ranges from 0 to 58, with a mean of 8.9 incidents.
+
+### Plot
+
+```{r}
+library(ggplot2)
+ggplot(ships, aes(x = period, y = incidents, color = type)) +
+  geom_point() +
+  ylim(c(0, max(ships$incidents) * 1.1)) + 
+  xlim(c(1, max(ships$period) * 1.1)) + 
+  ylab("Number of Incidents") + 
+  xlab("Period") +
+  ggtitle("Number of Incidents by Period and Ship Type")
+```
+
+Explanation: The scatter plot above depicts the number of incidents over different periods of operation for ships in the 'ships' dataset, with different colors representing different ship types. Each point represents a ship type in a specific period. Types A, C, D, and E have relatively few incidents, mostly concentrated around the period 60. Type B has significantly more incidents than other types, especially between periods 60 and 80.
+
+The `echo: false` option disables the printing of code (only output is displayed).
